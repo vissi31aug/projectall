@@ -1,7 +1,7 @@
 http:
   port: "8081"
 log:
-  message: "Welcome to Mule Project CI/CD Pipeline"
+  message: "Welcome to Mule Projects CI/CD Pipeline"
 
 
 deployment:
