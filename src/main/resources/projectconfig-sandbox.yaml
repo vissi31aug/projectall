@@ -1,0 +1,13 @@
+http:
+  port: "8081"
+log:
+  message: "Welcome to Mule Project CI/CD"
+
+
+deployment:
+  app:
+    runtime: 4.12.2
+    
+  region: us-east-2
+  workers: "1"
+  workerType: MICRO
