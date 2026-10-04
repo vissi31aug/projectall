@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>1e0fa0a1-8258-4382-9791-d9d8e0c0aaf4</groupId>
-	<artifactId>projectall-d</artifactId>
+	<artifactId>projectall-d1</artifactId>
 	<version>1.0.3-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
@@ -38,17 +38,11 @@
 						<target>Cloudhub-US-East-2</target>
 						<muleVersion>4.12.3:4e</muleVersion>
 						<server>anypoint-connected-apps</server>
-						<applicationName>${project.name}</applicationName>
+						<applicationName>projectall-d1</applicationName>
 						<replicas>1</replicas>
 						<vCores>0.5</vCores>
 
-						<properties>
-							<http.port>8081</http.port>
-							<mule.env>Sandbox</mule.env>
-						</properties>
-						<secureProperties>
-							<http.port>8081</http.port>
-						</secureProperties>
+						<javaVersion>17</javaVersion>
 
 					</cloudhub2Deployment>
 				</configuration>
