@@ -38,7 +38,7 @@
 						<environment>Sandbox</environment>
 						<target>Cloudhub-US-East-2</target>
 						<muleVersion>${deployment.app.runtime}</muleVersion>
-						<server>anypoint-connected-app</server>
+						
 						<applicationName>${appName}</applicationName>
 						<replicas>1</replicas>
 						<vCores>0.5</vCores>
