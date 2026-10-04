@@ -6,7 +6,7 @@ log:
 
 deployment:
   app:
-    runtime: 4.12.2
+    runtime: 4.8.0
     
   region: Cloudhub-US-East-2
   workers: "1"
