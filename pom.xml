@@ -39,8 +39,10 @@
 						
 						<!-- FIX 2: Added missing deployment identifiers -->
 						<environment>Sandbox</environment>
-						<muleVersion>${app.runtime}</muleVersion>
-						<applicationName>projectall-d-viss-unique</applicationName>
+						<muleVersion>4.4.0</muleVersion>
+						
+						<applicationName>projectall-d-viss-20261004</applicationName>
+						
 						
 						<replicas>1</replicas>
 						<vCores>0.5</vCores>
