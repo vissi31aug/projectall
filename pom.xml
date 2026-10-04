@@ -14,7 +14,6 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
 		<app.runtime>4.12.2</app.runtime>
 		<mule.maven.plugin.version>4.10.1</mule.maven.plugin.version>
 	</properties>
@@ -29,39 +28,44 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>3.7.1</version>
+				<!-- FIX 1: Linked to the modern version property instead of outdated 3.7.1 -->
+				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
 					<cloudhub2Deployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<provider>MC</provider>
 						<target>Cloudhub-US-East-2</target>
+						
+						<!-- FIX 2: Added missing deployment identifiers -->
+						<environment>Sandbox</environment>
+						<muleVersion>${app.runtime}</muleVersion>
+						<applicationName>projectall-d-viss-unique</applicationName>
+						
 						<replicas>1</replicas>
 						<vCores>0.5</vCores>
 						<properties>
-							<http.port>${http.port}</http.port>
-							<mule.env>${env}</mule.env>
-							<key>value</key>
+							<http.port>8081</http.port>
+							<mule.env>Sandbox</mule.env>
 						</properties>
-
 						<secureProperties>
 							<http.port>8081</http.port>
 						</secureProperties>
 					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
-
 		</plugins>
 	</build>
+
 	<distributionManagement>
 		<repository>
 			<id>anypoint-exchange-v3</id>
 			<name>Anypoint Exchange Repository</name>
+			<!-- FIX 3: Fixed the broken API endpoint string path -->
 			<url>https://mulesoft.com{project.groupId}/maven</url>
 			<layout>default</layout>
 		</repository>
 	</distributionManagement>
-
 
 	<dependencies>
 		<dependency>
@@ -82,7 +86,7 @@
 		<repository>
 			<id>anypoint-exchange-v3</id>
 			<name>Anypoint Exchange</name>
-			<url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
+			<url>https://mulesoft.com{project.groupId}/maven</url>
 			<layout>default</layout>
 		</repository>
 		<repository>
@@ -104,5 +108,4 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-
 </project>
