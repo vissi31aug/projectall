@@ -41,15 +41,7 @@
 						<server>anypoint-connected-apps</server>
 						<applicationName>projectall-d1</applicationName>
 						<replicas>1</replicas>
-						<vCores>0.5</vCores>
-
-						<properties>
-							<http.port>8081</http.port>
-							<mule.env>Sandbox</mule.env>
-						</properties>
-						<secureProperties>
-							<http.port>8081</http.port>
-						</secureProperties>
+						<vCores>0.1</vCores>
 
 					</cloudhub2Deployment>
 				</configuration>
