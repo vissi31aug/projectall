@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
@@ -27,30 +29,42 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
+				<version>3.7.1</version>
 				<extensions>true</extensions>
-				 <configuration>
-			    <cloudHubDeployment>
-			      <uri>https://anypoint.mulesoft.com</uri>
-			      <muleVersion>${deployment.app.runtime}</muleVersion>
-			      <username>${anypoint.username}</username>
-			      <password>${anypoint.password}</password>
-			      <applicationName>${project.artifactId}</applicationName>
-			      <environment>${env}</environment>
-			      <region>${deployment.region}</region>
-			      <workers>${deployment.workers}</workers>
-			      <workerType>${deployment.workerType}</workerType>
-			      <objectStoreV2>true</objectStoreV2>
-			      <properties>
-			        <http.port>${http.port}</http.port>
-			        <mule.env>${env}</mule.env>
-			        <key>value</key>
-			      </properties>
-			    </cloudHubDeployment>
-			  </configuration>
+				<configuration>
+					<cloudhub2Deployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<provider>MC</provider>
+						<environment>Sandbox</environment>
+						<target>Cloudhub-US-East-2</target>
+						<muleVersion>${deployment.app.runtime}</muleVersion>
+						<server>anypoint-connected-app</server>
+						<applicationName>${appName}</applicationName>
+						<replicas>1</replicas>
+						<vCores>0.5</vCores>
+						<properties>
+							<http.port>${http.port}</http.port>
+							<mule.env>${env}</mule.env>
+							<key>value</key>
+						</properties>
+
+						<secureProperties>
+							<http.port>8081</http.port>
+						</secureProperties>
+					</cloudhub2Deployment>
+				</configuration>
 			</plugin>
+
 		</plugins>
 	</build>
+	<distributionManagement>
+		<repository>
+			<id>Repository</id>
+			<name>Corporate Repository</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/ORGANIZATION_ID/maven</url>
+			<layout>default</layout>
+		</repository>
+	</distributionManagement>
 
 	<dependencies>
 		<dependency>
