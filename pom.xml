@@ -41,9 +41,6 @@
 						<applicationName>${project.name}</applicationName>
 						<replicas>1</replicas>
 						<vCores>0.5</vCores>
-						<businessGroupId>1e0fa0a1-8258-4382-9791-d9d8e0c0aaf4</businessGroupId>
-						<connectedAppClientId>8048a2a8b71847459d08d49cb23d0068</connectedAppClientId>
-						<connectedAppClientSecret>8268343B77994176Ad27cF539A364087</connectedAppClientSecret>
 						<properties>
 							<http.port>8081</http.port>
 							<mule.env>Sandbox</mule.env>
