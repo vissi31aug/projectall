@@ -64,7 +64,7 @@
 			<id>anypoint-exchange-v3</id>
 			<name>Anypoint Exchange Repository</name>
 			<!-- FIX 3: Fixed the broken API endpoint string path -->
-			<url>https://mulesoft.com{project.groupId}/maven</url>
+			<url>https://mulesoft.com${project.groupId}/maven</url>
 			<layout>default</layout>
 		</repository>
 	</distributionManagement>
