@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>1e0fa0a1-8258-4382-9791-d9d8e0c0aaf4</groupId>
+	<groupId>011a5f4a-23f0-4887-a32c-0a733c1a905</groupId>
 	<artifactId>projectall-d</artifactId>
 	<version>1.0.1-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
@@ -42,7 +42,7 @@
 						<replicas>1</replicas>
 						<vCores>0.5</vCores>
 
-						<businessGroupId>1e0fa0a1-8258-4382-9791-d9d8e0c0aaf4</businessGroupId>
+						<businessGroupId>011a5f4a-23f0-4887-a32c-0a733c1a905</businessGroupId>
 						<client_id>8048a2a8b71847459d08d49cb23d0068</client_id>
 						<client_secret>8268343B77994176Ad27cF539A364087</client_secret>
 
