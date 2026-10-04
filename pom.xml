@@ -42,10 +42,6 @@
 						<replicas>1</replicas>
 						<vCores>0.5</vCores>
 
-						<businessGroupId>011a5f4a-23f0-4887-a32c-0a733c1a905</businessGroupId>
-						<client_id>8048a2a8b71847459d08d49cb23d0068</client_id>
-						<client_secret>8268343B77994176Ad27cF539A364087</client_secret>
-
 						<properties>
 							<http.port>8081</http.port>
 							<mule.env>Sandbox</mule.env>
