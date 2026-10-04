@@ -5,11 +5,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>1e0fa0a1-8258-4382-9791-d9d8e0c0aaf4</groupId>
-	<artifactId>projectall</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<artifactId>projectall-d</artifactId>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
-	<name>projectall</name>
+	<name>projectall-d</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -55,12 +55,13 @@
 	</build>
 	<distributionManagement>
 		<repository>
-			<id>anypoint-connected-app</id>
-			<name>Corporate Repository</name>
-			<url>https://maven.anypoint.mulesoft.com/api/v2/organizations/${project.groupId}/maven</url>
+			<id>anypoint-exchange-v3</id>
+			<name>Anypoint Exchange Repository</name>
+			<url>https://mulesoft.com{project.groupId}/maven</url>
 			<layout>default</layout>
 		</repository>
 	</distributionManagement>
+
 
 	<dependencies>
 		<dependency>
