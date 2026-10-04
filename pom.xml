@@ -37,7 +37,7 @@
 						<environment>Sandbox</environment>
 						<target>Cloudhub-US-East-2</target>
 						<muleVersion>4.12.3:4e</muleVersion>
-						<server>anypoint-connected-apps</server>
+						<server>anypoint-connected-apps2</server>
 						<applicationName>projectall-d1</applicationName>
 						<replicas>1</replicas>
 						<vCores>0.5</vCores>
@@ -52,7 +52,7 @@
 	</build>
 	<distributionManagement>
 		<repository>
-			<id>anypoint-connected-apps</id>
+			<id>anypoint-connected-apps2</id>
 			<name>Corporate Repository</name>
 			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
 			<layout>default</layout>
