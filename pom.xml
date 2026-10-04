@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>1e0fa0a1-8258-4382-9791-d9d8e0c0aaf4</groupId>
-	<artifactId>projectall-d1</artifactId>
+	<artifactId>projectall-d</artifactId>
 	<version>1.0.3-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
@@ -37,11 +37,18 @@
 						<environment>Sandbox</environment>
 						<target>Cloudhub-US-East-2</target>
 						<muleVersion>4.12.3:4e</muleVersion>
-						<javaVersion>17</javaVersion>
 						<server>anypoint-connected-apps</server>
-						<applicationName>projectall-d1</applicationName>
+						<applicationName>${project.name}</applicationName>
 						<replicas>1</replicas>
-						<vCores>0.1</vCores>
+						<vCores>0.5</vCores>
+
+						<properties>
+							<http.port>8081</http.port>
+							<mule.env>Sandbox</mule.env>
+						</properties>
+						<secureProperties>
+							<http.port>8081</http.port>
+						</secureProperties>
 
 					</cloudhub2Deployment>
 				</configuration>
@@ -80,7 +87,7 @@
 		<repository>
 			<id>anypoint-exchange-v3</id>
 			<name>Anypoint Exchange</name>
-			<url>https://mulesoft.com{project.groupId}/maven</url>
+			<url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
 			<layout>default</layout>
 		</repository>
 		<repository>
